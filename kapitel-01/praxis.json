@@ -1,0 +1,41 @@
+{
+  "toolchainLabel": "Java / Maven",
+  "testCommand": "mvn test",
+  "prerequisites": [
+    "JDK 17 oder neuer",
+    "Maven 3.9 oder neuer"
+  ],
+  "setupSteps": [
+    "Repository klonen",
+    "Ordner kapitel-01/aufgabe-01 öffnen",
+    "In der IDE oder im Terminal 'mvn test' ausführen — alle Tests sind rot, da die Methodenrümpfe nur UnsupportedOperationException werfen",
+    "Für jede weitere Aufgabe den jeweiligen Ordner öffnen und ebenfalls mit 'mvn test' starten"
+  ],
+  "referenceDescription": "Im Ordner referenz/ liegt ein vollständiges, lauffähiges Maven-Projekt mit dem Konsolenprogramm 'Begruessung'. Es liest über Scanner Name und Alter ein und gibt eine formatierte Begrüßung aus. Es dient als Vorbild für Klassenaufbau, main-Methode, Ausgabe mit System.out.println, Eingabe mit Scanner sowie korrekte Kommentare und Namenskonventionen.",
+  "tasks": [
+    {
+      "id": "aufgabe-01",
+      "title": "Methodenrumpf ausfüllen: Begrüßungstext erzeugen",
+      "goal": "Ich fülle einen vorgegebenen Methodenrumpf so, dass die Methode einen einfachen Begrüßungstext als String zurückgibt und verstehe dabei Klassenaufbau und das Semikolon am Anweisungsende.",
+      "expectedSignature": "public String begruessung()"
+    },
+    {
+      "id": "aufgabe-02",
+      "title": "Ausgabe formatieren: Name und Alter zusammenfügen",
+      "goal": "Ich baue aus einem Namen und einem Alter mit dem +-Operator einen formatierten Ausgabetext zusammen und lerne so die Textverkettung für System.out.println kennen.",
+      "expectedSignature": "public String formatiere(String name, int alter)"
+    },
+    {
+      "id": "aufgabe-03",
+      "title": "Eingabe verarbeiten: Scanner-Werte auswerten",
+      "goal": "Ich verarbeite einen eingelesenen Namen und ein eingelesenes Alter aus einem Scanner und gebe daraus eine passende Begrüßung zurück, um die Eingabeverarbeitung zu üben.",
+      "expectedSignature": "public String verarbeiteEingabe(Scanner sc)"
+    },
+    {
+      "id": "aufgabe-04",
+      "title": "Klasse selbst schreiben: vollständiges Begrüßungsprogramm",
+      "goal": "Ich schreibe eine komplette Klasse mit Methode, die Name und Alter kombiniert und eine altersabhängige Begrüßung liefert, und wende dabei Namenskonventionen, Klammern und Kommentare korrekt an.",
+      "expectedSignature": "public String erstelleBegruessung(String name, int alter)"
+    }
+  ]
+}
