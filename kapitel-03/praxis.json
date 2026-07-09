@@ -1,0 +1,42 @@
+{
+  "toolchainLabel": "Java / Maven",
+  "testCommand": "mvn test",
+  "prerequisites": [
+    "JDK 17 oder neuer",
+    "Maven 3.9 oder neuer"
+  ],
+  "setupSteps": [
+    "Repository klonen",
+    "Ordner kapitel-datentypen/aufgabe-01 in der IDE oder im Terminal oeffnen",
+    "Sicherstellen, dass JDK 17+ und Maven installiert sind (java -version, mvn -version)",
+    "mvn test ausfuehren — die Tests schlagen fehl, weil jede Methode nur throw new UnsupportedOperationException(\"TODO\") enthaelt (rot)",
+    "Methodenruempfe im Ordner src/main/java implementieren, bis mvn test gruen ist"
+  ],
+  "referenceDescription": "Im Ordner referenz/ liegt ein vollstaendiges Maven-Projekt mit der Klasse Messwert im Paket de.lernplattform.datentypen. Messwert nimmt Sensordaten unterschiedlicher primitiver Typen auf (z.B. Temperatur als double, Zaehlerstand als int, Sensorkennung als char) und stellt Methoden zum Pruefen von Wertebereichen, zum Erkennen von Ueberlauf, zum Umwandeln zwischen primitiven Typen und Wrapper-Klassen sowie zur sicheren Behandlung von null bereit. Enthaelt zusaetzlich die identischen JUnit-5-Tests, damit die Musterloesung sofort gruen ist und als Referenz dient.",
+  "tasks": [
+    {
+      "id": "aufgabe-01",
+      "title": "Sensorwert im byte-Bereich pruefen",
+      "goal": "Du sollst pruefen koennen, ob ein als int gelesener Sensorwert in den Wertebereich eines byte (-128 bis 127) passt, damit du den passenden Datentyp waehlst.",
+      "expectedSignature": "public boolean passtInByte(int wert)"
+    },
+    {
+      "id": "aufgabe-02",
+      "title": "Ueberlauf beim Hochzaehlen erkennen",
+      "goal": "Du sollst erkennen, wann die Addition zweier int-Werte den Wertebereich von int ueberschreitet und dadurch ein Ueberlauf entsteht.",
+      "expectedSignature": "public boolean verursachtUeberlauf(int a, int b)"
+    },
+    {
+      "id": "aufgabe-03",
+      "title": "Zaehlerstaende in eine Liste boxen",
+      "goal": "Du sollst primitive int-Werte in Integer-Wrapper umwandeln (Autoboxing) und die Summe wieder als primitiven int zurueckgeben (Unboxing).",
+      "expectedSignature": "public int summiereMesswerte(java.util.List<Integer> werte)"
+    },
+    {
+      "id": "aufgabe-04",
+      "title": "Sensorbezeichnung sicher gegen null pruefen",
+      "goal": "Du sollst eine moeglicherweise null-wertige Sensorbezeichnung sicher behandeln und ihre Laenge ermitteln, ohne eine NullPointerException auszuloesen.",
+      "expectedSignature": "public int laengeDerBezeichnung(String bezeichnung)"
+    }
+  ]
+}
