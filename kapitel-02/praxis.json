@@ -1,0 +1,35 @@
+{
+  "toolchainLabel": "Java / Maven",
+  "testCommand": "mvn test",
+  "prerequisites": [
+    "JDK 17 oder neuer",
+    "Maven 3.9 oder neuer"
+  ],
+  "setupSteps": [
+    "Repository klonen",
+    "Ordner kapitel-01/aufgabe-01 in der IDE oder im Terminal öffnen",
+    "mvn test ausführen — alle Tests sind rot, da die Methodenrümpfe nur UnsupportedOperationException werfen",
+    "Für die weiteren Aufgaben jeweils den passenden Ordner (aufgabe-02, aufgabe-03) öffnen und mvn test starten"
+  ],
+  "referenceDescription": "Im Ordner referenz/ liegt das vollständige, lauffähige Maven-Projekt 'Rechner'. Es enthält die Klasse de.schule.rechner.Rechner mit einer main-Methode, die eine Rechenoperation über Programmargumente entgegennimmt, sowie Hilfsmethoden zum Auslesen, Prüfen und Berechnen der Argumente. Dient als Vorlage und Erklärung, wie args verarbeitet und wie aus Quellcode über javac/java ein laufendes Programm wird.",
+  "tasks": [
+    {
+      "id": "aufgabe-01",
+      "title": "Programmargumente auslesen",
+      "goal": "Du lernst, die beim Start übergebenen Werte aus dem String[] args zu lesen und einzeln zurückzugeben, damit du verstehst, wie Argumente in dein Programm gelangen.",
+      "expectedSignature": "public static String leseArgument(String[] args, int index)"
+    },
+    {
+      "id": "aufgabe-02",
+      "title": "Fehlende Argumente sauber behandeln",
+      "goal": "Du lernst, mit args.length zu prüfen, ob genügend Argumente übergeben wurden, und einen fehlenden Fall kontrolliert zu behandeln, statt dass das Programm abstürzt.",
+      "expectedSignature": "public static boolean hatGenugArgumente(String[] args, int benoetigt)"
+    },
+    {
+      "id": "aufgabe-03",
+      "title": "Rechenoperation ausführen und Ergebnis liefern",
+      "goal": "Du lernst, die als Text übergebenen Argumente (Operation und zwei Zahlen) in Zahlen umzuwandeln und das Rechenergebnis als Rückgabewert zu liefern.",
+      "expectedSignature": "public static int rechne(String[] args)"
+    }
+  ]
+}
